@@ -113,6 +113,13 @@ export default function PlansStep({
       : plans.find((plan) => plan.name === e.target.value).monthlyPrice;
     handleChangeValues("plan", "price", selectedPrice);
   };
+  const handlePlanPriceChange = (e) => {
+    handleChangeValues("plan", "yearly", e.target.checked);
+    const selectedPrice = e.target.checked
+      ? plans.find((plan) => plan.name === planInfo.planName).yearlyPrice
+      : plans.find((plan) => plan.name === planInfo.planName).monthlyPrice;
+    handleChangeValues("plan", "price", selectedPrice);
+  };
 
   return (
     <Stack
@@ -287,9 +294,7 @@ export default function PlansStep({
             <AntSwitch
               disableRipple
               checked={planInfo.yearly}
-              onChange={(e) =>
-                handleChangeValues("plan", "yearly", e.target.checked)
-              }
+              onChange={(e) => handlePlanPriceChange(e)}
               slotProps={{ input: { "aria-label": "ant design" } }}
             />
             <Typography
