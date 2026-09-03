@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL Here](https://github.com/AbuEisha/front-end-mentor-challenges/tree/multi-step-form)
+- [Solution URL Here](https://github.com/AbuEisha/multi-step-form)
 - [Live Site URL Here](https://multi-step-form-live.pages.dev/)
 
 ## My process
